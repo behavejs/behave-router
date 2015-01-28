@@ -60,6 +60,15 @@ router.middleware((ctx) => {
         todoStore = new TodoStore();
         dispatcher.register('TodoStore', todoStore.update.bind(todoStore));
     }
+
+    // middleware must return ctx object
+    return ctx;
+});
+
+/* handle data sanitization in middleware
+router.middleware((ctx) => {
+   if (!ctx.data.currentUser) ctx.data.currentUser = (getCurrentUser() || {});
+   return ctx;
 });
 
 /* set up routes */
