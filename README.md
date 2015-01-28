@@ -65,7 +65,7 @@ router.middleware((ctx) => {
     return ctx;
 });
 
-/* handle data sanitization in middleware
+/* handle data sanitization in middleware */
 router.middleware((ctx) => {
    if (!ctx.data.currentUser) ctx.data.currentUser = (getCurrentUser() || {});
    return ctx;
