@@ -120,7 +120,7 @@ router.use('todos/:id/edit', (ctx) => {
 });
 
 // example breaking down todoStore and unregistering with dispatcher
-// when we leave the routers scope (any routes not in the router)
+// when we leave the router's scope (any routes not in the router)
 router.exit((ctx) => {
     if (todoStore) {
         delete todoStore;
