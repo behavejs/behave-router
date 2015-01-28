@@ -17,7 +17,7 @@ npm install --save behave-router
 import BehaveHistory from 'behave-history';
 import BehaveRouter from 'behave-router';
 import dispatcher from 'behave-dispatcher';
-import TodoStore from './stores/todo;
+import TodoStore from './stores/todo';
 
 // should only be one history instance
 var history = new BehaveHistory({ dispatcher: dispatcher });
