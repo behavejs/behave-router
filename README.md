@@ -136,6 +136,7 @@ router.exit((ctx) => {
     dispatcher.dispatch({
         evt: 'ROUTE_CHANGE',
         route: 'todos',
+        data: ctx.data,
         options: {
 
             // replace window state so we don't get caught in loop
