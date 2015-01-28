@@ -276,44 +276,6 @@ describe('BehaveRouter', () => {
         });
     });
 
-    describe('._buildContext(cb, results)', () => {
-
-        beforeEach(() => {
-            this.results = {
-                pullRoutes: {
-                    routes: [],
-                    route: 'some/url',
-                    data: {}
-                }
-            };
-
-            this.cb = sinon.spy();
-        });
-
-        it('should be defined', (done) => {
-            expect(this.router._buildContext).toBeDefined();
-            done();
-        });
-
-
-        it('should build a context object to be given to each middleware',
-                (done) => {
-
-            this.router._buildContext(this.cb, this.results);
-            expect(this.cb.called).toBe(true);
-            expect(this.cb.calledWith(null, {
-                routes: [],
-                route: 'some/url',
-                context: {
-                    data: {},
-                    _router: this.router,
-                    _canonicalPath: 'some/url'
-                }
-            }));
-            done();
-        });
-    });
-
     describe('._runRoutes(cb, results)', () => {
 
         beforeEach(() => {
