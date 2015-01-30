@@ -108,7 +108,7 @@ class Router {
             cb(null, {
                 routes: results.pullRoutes.routes,
                 route: results.pullRoutes.route,
-                context: context
+                context: (middleware.length) ? context : ctx
             });
         });
     }

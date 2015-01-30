@@ -181,3 +181,4 @@ ___
 
 - 0.1.0 Initial release
 - 0.1.1 Fixed package.json main prop pointing to es6 class
+- 0.1.2 Fixed issue of context being undefined when no middleware are run
