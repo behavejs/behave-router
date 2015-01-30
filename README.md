@@ -180,3 +180,4 @@ ___
 ### Release History
 
 - 0.1.0 Initial release
+- 0.1.1 Fixed package.json main prop pointing to es6 class
